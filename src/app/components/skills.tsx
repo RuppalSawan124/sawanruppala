@@ -35,13 +35,13 @@ export default function Skills() {
   const [selectedCategory, setSelectedCategory] = useState<SkillCategory>('itSkills'); // Default to IT Skills
 
   return (
-    <section className="px-10 py-10">
+    <section id='skills' className="px-10 py-10">
       <h2 className="text-3xl font-bold mb-6">Skills</h2>
 
       {/* Buttons to toggle between skill categories */}
       <div className="flex justify-center space-x-6 mb-8">
         <motion.button
-          className={`px-4 py-2 text-lg font-normal rounded-xl ${selectedCategory === 'itSkills' ? 'bg-violet-700 text-white' : 'bg-gray-200 text-black'
+          className={`px-5 py-2 text-lg font-semibold rounded-xl ${selectedCategory === 'itSkills' ? 'bg-violet-700 text-white' : 'bg-gray-200 text-black'
             }`}
           onClick={() => setSelectedCategory('itSkills')}
           whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
@@ -51,7 +51,7 @@ export default function Skills() {
         </motion.button>
 
         <motion.button
-          className={`px-4 py-2 text-lg font-normal rounded-xl ${selectedCategory === 'frontEnd' ? 'bg-violet-700 text-white' : 'bg-gray-200 text-black'
+          className={`px-5 py-2 text-lg font-semibold rounded-xl ${selectedCategory === 'frontEnd' ? 'bg-violet-700 text-white' : 'bg-gray-200 text-black'
             }`}
           onClick={() => setSelectedCategory('frontEnd')}
           whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
@@ -61,7 +61,7 @@ export default function Skills() {
         </motion.button>
 
         <motion.button
-          className={`px-4 py-2 text-lg font-normal rounded-xl ${selectedCategory === 'backEnd' ? 'bg-violet-700 text-white' : 'bg-gray-200 text-black'
+          className={`px-5 py-2 text-lg font-semibold rounded-xl ${selectedCategory === 'backEnd' ? 'bg-violet-700 text-white' : 'bg-gray-200 text-black'
             }`}
           onClick={() => setSelectedCategory('backEnd')}
           whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}

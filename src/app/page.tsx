@@ -35,7 +35,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
           >
-            I'm Sawan Ruppala - a web design intern at Pacific Cellulose LTD
+            I'm Sawan Ruppala - a junior web designer at Pacific Cellulose LTD
           </motion.p>
 
           {/* Social Icons Animation */}
@@ -46,107 +46,116 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.6, ease: 'easeOut' }}
           >
             {/* Your social icons here */}
-            
-
-        {/* Social Icons Animation */}
-        <motion.div
-          className="flex space-x-20 mt-4"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.6, ease: 'easeOut' }}
-        >
-          <motion.a
-            href="https://github.com/RuppalSawan124"
-            className="text-gray-400 hover:text-white"
-            aria-label="GitHub"
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{
-              x: [0, -3, 3, -3, 3, 0],
-              y: [0, -2, 2, -2, 2, 0],
-              transition: {
-                duration: 0.4,
-                repeat: Infinity,
-                repeatType: 'loop',
-                ease: 'easeInOut',
-              },
-            }}
-          >
-            <FaGithub size={40} />
-          </motion.a>
-
-          <motion.a
-            href="https://www.linkedin.com/in/sawan-ruppala-304623235"
-            className="text-gray-400 hover:text-white"
-            aria-label="LinkedIn"
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{
-              x: [0, -3, 3, -3, 3, 0],
-              y: [0, -2, 2, -2, 2, 0],
-              transition: {
-                duration: 0.4,
-                repeat: Infinity,
-                repeatType: 'loop',
-                ease: 'easeInOut',
-              },
-            }}
-          >
-            <FaLinkedin size={40} />
-          </motion.a>
-
-          <motion.a
-            href="https://docs.google.com/document/d/1s8yTa3m1l-i8k055LQT-aqud0f18Ro8gA9sjJP8Qm5g/edit?usp=sharing" // Opens the default email client
-            className="text-gray-400 hover:text-white"
-            target="_blank"
-            aria-label="Resume"
-            whileHover={{
-              x: [0, -3, 3, -3, 3, 0],
-              y: [0, -2, 2, -2, 2, 0],
-              transition: {
-                duration: 0.4,
-                repeat: Infinity,
-                repeatType: 'loop',
-                ease: 'easeInOut',
-              },
-            }}
-          >
-            <BiSolidNotepad size={40} />
-          </motion.a>
 
 
+            {/* Social Icons Animation */}
+            <motion.div
+              className="flex space-x-20 mt-4"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.6, ease: 'easeOut' }}
+            >
+              <motion.a
+                href="https://github.com/RuppalSawan124"
+                className="text-gray-400 hover:text-white"
+                aria-label="GitHub"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{
+                  x: [0, -3, 3, -3, 3, 0],
+                  y: [0, -2, 2, -2, 2, 0],
+                  transition: {
+                    duration: 0.4,
+                    repeat: Infinity,
+                    repeatType: 'loop',
+                    ease: 'easeInOut',
+                  },
+                }}
+              >
+                <FaGithub size={40} />
+              </motion.a>
+
+              <motion.a
+                href="https://www.linkedin.com/in/sawan-ruppala-304623235"
+                className="text-gray-400 hover:text-white"
+                aria-label="LinkedIn"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{
+                  x: [0, -3, 3, -3, 3, 0],
+                  y: [0, -2, 2, -2, 2, 0],
+                  transition: {
+                    duration: 0.4,
+                    repeat: Infinity,
+                    repeatType: 'loop',
+                    ease: 'easeInOut',
+                  },
+                }}
+              >
+                <FaLinkedin size={40} />
+              </motion.a>
+
+              <motion.a
+                href="https://docs.google.com/document/d/1s8yTa3m1l-i8k055LQT-aqud0f18Ro8gA9sjJP8Qm5g/edit?usp=sharing" // Opens the default email client
+                className="text-gray-400 hover:text-white"
+                target="_blank"
+                aria-label="Resume"
+                whileHover={{
+                  x: [0, -3, 3, -3, 3, 0],
+                  y: [0, -2, 2, -2, 2, 0],
+                  transition: {
+                    duration: 0.4,
+                    repeat: Infinity,
+                    repeatType: 'loop',
+                    ease: 'easeInOut',
+                  },
+                }}
+              >
+                <BiSolidNotepad size={40} />
+              </motion.a>
 
 
-          <motion.a
-            href="https://www.google.com/maps/contrib/105128129541812787621"
-            className="text-gray-400 hover:text-white"
-            aria-label="Google"
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{
-              x: [0, -3, 3, -3, 3, 0],
-              y: [0, -2, 2, -2, 2, 0],
-              transition: {
-                duration: 0.4,
-                repeat: Infinity,
-                repeatType: 'loop',
-                ease: 'easeInOut',
-              },
-            }}
-          >
-            <FaGoogle size={40} />
-          </motion.a>
 
-          
-    
-        </motion.div>
+
+              <motion.a
+                href="https://www.google.com/maps/contrib/105128129541812787621"
+                className="text-gray-400 hover:text-white"
+                aria-label="Google"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{
+                  x: [0, -3, 3, -3, 3, 0],
+                  y: [0, -2, 2, -2, 2, 0],
+                  transition: {
+                    duration: 0.4,
+                    repeat: Infinity,
+                    repeatType: 'loop',
+                    ease: 'easeInOut',
+                  },
+                }}
+              >
+                <FaGoogle size={40} />
+              </motion.a>
+
+
+
+            </motion.div>
           </motion.div>
         </div>
 
         {/* Right side for the GLTF Model */}
-        <div className="flex w-1/2 h-96">
+        <motion.div
+          className="flex w-1/2 h-96 bg-neutral-900 rounded-3xl border-4 border-white"
+          initial={{ opacity: 0 }}   // Starts invisible
+          animate={{ opacity: 1 }}   // Fades to full visibility
+          transition={{ duration: 4 }}  // Fades in over 4 seconds
+        >
           <ModelViewer />
-        </div>
+        </motion.div>
+
+
+
+
       </main>
 
       <AboutMe />

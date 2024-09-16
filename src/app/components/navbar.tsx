@@ -22,7 +22,7 @@ export default function Navbar() {
             whileTap={{ scale: 0.9 }}     // Shrink effect when clicked
             transition={{ type: 'spring', stiffness: 300 }}
           >
-            <a href="#about" className="text-white hover:text-gray-300 transition duration-200">
+            <a href="#aboutme" className="text-white hover:text-gray-300 transition duration-200">
               About
             </a>
           </motion.div>
@@ -32,7 +32,7 @@ export default function Navbar() {
             whileTap={{ scale: 0.9 }}     // Shrink effect when clicked
             transition={{ type: 'spring', stiffness: 300 }}
           >
-            <a href="#about" className="text-white hover:text-gray-300 transition duration-200">
+            <a href="#skills" className="text-white hover:text-gray-300 transition duration-200">
               Skills
             </a>
           </motion.div>
@@ -42,7 +42,7 @@ export default function Navbar() {
             whileTap={{ scale: 0.9 }}     // Shrink effect when clicked
             transition={{ type: 'spring', stiffness: 300 }}
           >
-            <a href="#about" className="text-white hover:text-gray-300 transition duration-200">
+            <a href="#projects" className="text-white hover:text-gray-300 transition duration-200">
               Projects
             </a>
           </motion.div>
