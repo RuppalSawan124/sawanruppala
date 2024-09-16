@@ -4,7 +4,7 @@ import Tilt from 'react-parallax-tilt'; // Import Tilt
 
 const AboutMe = () => {
   return (
-    <section className="px-10 py-10 max-w-2xl mx-auto text-center">
+    <section className="px-10 py-10 pt-6 max-w-2xl mx-auto text-center">
       <motion.h2
         className="text-5xl font-bold mb-10"
         initial={{ opacity: 0, y: 50 }}

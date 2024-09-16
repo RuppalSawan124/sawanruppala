@@ -16,6 +16,7 @@ export default function Navbar() {
 
         {/* Navigation Links with hover animation */}
         <nav className="flex space-x-8 text-xl font-thin">
+
           <motion.div
             whileHover={{ scale: 1.1 }}   // Slight grow effect on hover
             whileTap={{ scale: 0.9 }}     // Shrink effect when clicked
@@ -25,24 +26,28 @@ export default function Navbar() {
               About
             </a>
           </motion.div>
+
           <motion.div
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+            whileHover={{ scale: 1.1 }}   // Slight grow effect on hover
+            whileTap={{ scale: 0.9 }}     // Shrink effect when clicked
             transition={{ type: 'spring', stiffness: 300 }}
           >
-            <a href="#resume" className="text-white hover:text-gray-300 transition duration-200">
-              Resume
+            <a href="#about" className="text-white hover:text-gray-300 transition duration-200">
+              Skills
             </a>
           </motion.div>
+
           <motion.div
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+            whileHover={{ scale: 1.1 }}   // Slight grow effect on hover
+            whileTap={{ scale: 0.9 }}     // Shrink effect when clicked
             transition={{ type: 'spring', stiffness: 300 }}
           >
-            <a href="#contact" className="text-white hover:text-gray-300 transition duration-200">
-              Contact
+            <a href="#about" className="text-white hover:text-gray-300 transition duration-200">
+              Projects
             </a>
           </motion.div>
+
+       
         </nav>
       </div>
     </header>
