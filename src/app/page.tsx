@@ -19,11 +19,11 @@ const ModelViewer = dynamic(() => import('./components/modelviewer'), {
 export default function Home() {
   return (
     <div className="bg-[#0a0a0a] text-white font-sans min-h-screen">
-        <title>Sawan Ruppala</title>
+      <title>Sawan Ruppala</title>
       <ReactCursorPosition color='255,255,255' />
       <Analytics />
       {/* Navbar */}
-      <div className="bg-gradient-to-tr from-[#0a0a0a] via-[#0a0a0a] to-gray-700 bg-[length:200%_200%]" >
+      <div className="bg-gradient-to-tr from-[#0a0a0a] via-[#0a0a0a] to-gray-600 bg-[length:200%_200%]" >
         <Navbar />
 
         {/* Main Section */}
@@ -73,7 +73,7 @@ export default function Home() {
                   },
                 }}
               >
-                <FaGithub size={40} className="md:text-3xl" />
+                <FaGithub size={45} className="md:text-3xl" />
               </motion.a>
 
               <motion.a
@@ -93,7 +93,7 @@ export default function Home() {
                   },
                 }}
               >
-                <FaLinkedin size={40} className="md:text-3xl" />
+                <FaLinkedin size={45} className="md:text-3xl" />
               </motion.a>
 
               <motion.a
@@ -112,7 +112,7 @@ export default function Home() {
                   },
                 }}
               >
-                <BiSolidNotepad size={40} className="md:text-3xl" />
+                <BiSolidNotepad size={45} className="md:text-3xl" />
               </motion.a>
 
               <motion.a
@@ -132,7 +132,7 @@ export default function Home() {
                   },
                 }}
               >
-                <FaEnvelope size={40} className="md:text-3xl" />
+                <FaEnvelope size={45} className="md:text-3xl" />
               </motion.a>
             </motion.div>
           </div>
@@ -150,9 +150,33 @@ export default function Home() {
         </main>
       </div>
 
-      <AboutMe />
-      <Skills />
-      <Project />
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: 'easeOut' }}
+        viewport={{ once: true }}  // Ensures it only animates once
+      >
+        <AboutMe />
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1, ease: 'easeOut' }}
+        viewport={{ once: true }}
+      >
+        <Skills />
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: 'easeOut' }}
+        viewport={{ once: true }}
+      >
+        <Project />
+      </motion.div>
+
     </div>
   );
 }

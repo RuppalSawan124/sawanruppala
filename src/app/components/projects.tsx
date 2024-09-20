@@ -1,5 +1,6 @@
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'; // Import default styles
+import { motion } from 'framer-motion';
 
 const slideImages = [
   {
@@ -14,7 +15,7 @@ const slideImages = [
     description: 'A Roblox Game utilizing the game theory concepts of capture the flag. Coded in Lua',
     link: 'https://www.roblox.com/games/170542886/Team-Flag-Warfare',
   },
-  
+
 ];
 
 const ProjectSlideshow = () => {
@@ -48,10 +49,16 @@ const ProjectSlideshow = () => {
                 href={slideImage.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-400 mt-2 underline text-center"
               >
-                View Project
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.2 }}
+                  className="bg-black text-white border border-white px-4 py-2 mt-8 mb-4 rounded-3xl text-center"
+                >
+                  View Project
+                </motion.div>
               </a>
+
             </div>
           </div>
         ))}
