@@ -20,7 +20,7 @@ const slideImages = [
 const ProjectSlideshow = () => {
   return (
     <div id='projects' className="slide-container py-20">
-      <h2 className="text-3xl font-bold mb-10 ml-10">Projects</h2>
+      <h2 className="text-5xl font-bold mb-10 ml-10">Projects</h2>
 
       <Slide easing="ease" duration={3000}>
         {slideImages.map((slideImage, index) => (

@@ -36,12 +36,12 @@ export default function Skills() {
 
   return (
     <section id='skills' className="px-10 py-10">
-      <h2 className="text-3xl font-bold mb-6">Skills</h2>
+      <h2 className="text-5xl font-bold mb-6">Skills</h2>
 
       {/* Buttons to toggle between skill categories */}
-      <div className="flex justify-center space-x-6 mb-8">
+      <div className="flex justify-center space-x-10 mb-8">
         <motion.button
-          className={`px-5 py-2 text-lg font-semibold rounded-xl ${selectedCategory === 'itSkills' ? 'bg-violet-700 text-white' : 'bg-gray-200 text-black'
+          className={`px-7 py-2 text-lg font-semibold rounded-xl ${selectedCategory === 'itSkills' ? 'bg-gradient-to-r from-green-400 to-teal-500 text-white' : 'bg-gray-200 text-black'
             }`}
           onClick={() => setSelectedCategory('itSkills')}
           whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
@@ -51,7 +51,7 @@ export default function Skills() {
         </motion.button>
 
         <motion.button
-          className={`px-5 py-2 text-lg font-semibold rounded-xl ${selectedCategory === 'frontEnd' ? 'bg-violet-700 text-white' : 'bg-gray-200 text-black'
+          className={`px-5 py-2 text-lg font-semibold rounded-xl ${selectedCategory === 'frontEnd' ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white' : 'bg-gray-200 text-black'
             }`}
           onClick={() => setSelectedCategory('frontEnd')}
           whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
@@ -61,7 +61,7 @@ export default function Skills() {
         </motion.button>
 
         <motion.button
-          className={`px-5 py-2 text-lg font-semibold rounded-xl ${selectedCategory === 'backEnd' ? 'bg-violet-700 text-white' : 'bg-gray-200 text-black'
+          className={`px-5 py-2 text-lg font-semibold rounded-xl ${selectedCategory === 'backEnd' ? 'bg-gradient-to-r from-gray-700 to-blue-500 text-white' : 'bg-gray-200 text-black'
             }`}
           onClick={() => setSelectedCategory('backEnd')}
           whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
@@ -77,19 +77,19 @@ export default function Skills() {
         {skillsData[selectedCategory].map((skill, index) => (
           <motion.div
             key={index}
-            className="relative p-4 border border-yellow-200 rounded-3xl group hover:bg-white transition duration-300"
+            className="relative p-8 group hover:bg-[#1f395a] rounded-xl transition duration-300"
             whileHover={{
               scale: 1.05,
-              transition: { duration: 0.3, ease: 'easeOut' }
+              transition: { duration: 0.05, ease: 'easeOut' }
             }}
           >
             <div className="flex items-center">
               <img src={skill.icon} alt={skill.name} className="w-8 h-8 mr-3" />
-              <p className="text-lg font-semibold group-hover:text-black">{skill.name}</p>
+              <p className="text-xl font-semibold ">{skill.name}</p>
             </div>
-            <div className="relative w-full bg-white h-2 mt-2">
+            <div className="relative w-full bg-black rounded-2xl h-2 mt-4">
               <motion.div
-                className="absolute left-0 top-0 h-2 bg-violet-900"
+                className="absolute left-0 top-0 h-2 rounded-2xl bg-white"
                 style={{ width: skill.level }}
                 initial={{ width: 0 }}
                 animate={{ width: skill.level }}

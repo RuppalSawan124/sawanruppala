@@ -1,11 +1,12 @@
-import React from 'react';
+import { useGLTF } from '@react-three/drei';
 import { Canvas, useThree } from '@react-three/fiber';
-import { OrbitControls, useGLTF } from '@react-three/drei';
+import { OrbitControls } from '@react-three/drei';
+
+useGLTF.preload('/sawan_face.glb'); // Preload the GLB model
 
 function CameraAdjust() {
   const { camera } = useThree();
-  // Move the camera closer to the model's face
-  camera.position.set(-5, -0.5, 1); // Adjust as necessary
+  camera.position.set(-5, -0.5, 1);
   return null;
 }
 
@@ -14,26 +15,16 @@ export default function ModelViewer() {
 
   return (
     <Canvas className="h-full w-full">
-      <ambientLight intensity={0.8} />
+      <ambientLight intensity={1.5} />
       <directionalLight position={[10, 10, 5]} />
-
-      {/* Adjust camera */}
       <CameraAdjust />
-
-      {/* Render the model */}
       <primitive object={scene} scale={10} />
-
-      {/* OrbitControls with limited touch interaction */}
       <OrbitControls
-        enableZoom={false} // Disable zoom
-        enablePan={false}  // Disable pan to prevent movement on touch devices
-        rotateSpeed={0.5}  // Reduce rotate speed to prevent extreme rotation
-        enableRotate={true} // Keep rotation enabled for mouse
-        // Adjust touch settings
-        touch={{ 
-          ONE: false, // Disable single-finger touch rotation
-          TWO: false  // Disable two-finger touch panning/rotation
-        }}
+        enableZoom={false}
+        enablePan={false}
+        rotateSpeed={0.7}
+        enableRotate={true}
+        touch={{ ONE: false, TWO: false }}
       />
     </Canvas>
   );
