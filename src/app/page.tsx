@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <div className="bg-[#0a0a0a] text-white font-sans min-h-screen">
       <title>Sawan Ruppala</title>
-      <ReactCursorPosition color='255,255,255' />
+      <ReactCursorPosition color='255,255,255' trailingSpeed={15}  />
       <Analytics />
       {/* Navbar */}
       <div className="bg-gradient-to-tr from-[#0a0a0a] via-[#0a0a0a] to-gray-600 bg-[length:200%_200%]" >
@@ -34,16 +34,16 @@ export default function Home() {
               className="text-4xl md:text-5xl font-bold mb-8"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.3, delay: 1.5, ease: 'easeOut' }}
+              transition={{ duration: 1.3, delay: 1, ease: 'easeOut' }}
             >
               Welcome To My Website
             </motion.h1>
 
             <motion.p
               className="text-xl mb-4 font-extralight"
-              initial={{ opacity: 0, y: 100 }}
+              initial={{ opacity: 0, y: 80}}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 2, ease: 'easeOut' }}
+              transition={{ duration: 1, delay: 1.5, ease: 'easeOut' }}
             >
               I'm Sawan Ruppala - a junior web designer at Pacific Cellulose LTD
             </motion.p>
@@ -51,9 +51,9 @@ export default function Home() {
             {/* Social Icons Animation */}
             <motion.div
               className="flex space-x-8 md:space-x-20 mt-4 justify-center md:justify-start"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, delay: 2.4, ease: 'easeOut' }}
+              initial={{ opacity: 0, y: 110  }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 2, ease: 'easeOut' }}
             >
               {/* Social icons with hover effects */}
               <motion.a
