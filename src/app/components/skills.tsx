@@ -1,34 +1,34 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
-// Skill data for each category
+
 const skillsData = {
   itSkills: [
-    { name: 'Kali Linux', level: '85%', icon: '/kali-linux.svg' },
-    { name: 'Windows Server 2022', level: '70%', icon: '/win.svg' },
-    { name: 'Burp Suite', level: '90%', icon: '/burp-suite.svg' },
-    { name: 'Cisco-Networking', level: '90%', icon: '/cisco.svg' }
+    { name: 'Kali Linux', icon: '/kali-linux.svg' },
+    { name: 'Windows Server 2022', icon: '/win.svg' },
+    { name: 'Burp Suite', icon: '/burp-suite.svg' },
+    { name: 'Cisco-Networking', icon: '/cisco.svg' },
+    { name: 'Bash', icon: '/bash.svg' }
   ],
   frontEnd: [
-    { name: 'TypeScript', level: '80%', icon: '/typescript.svg' },
-    { name: 'Tailwind CSS', level: '95%', icon: '/tailwind.svg' },
-    { name: 'React', level: '92%', icon: '/react.svg' },
-    { name: 'Next.js', level: '85%', icon: '/nextjs.svg' },
-    { name: 'Node.js', level: '85%', icon: '/nodejs-icon.svg' },
-    { name: 'SquareSpace', level: '85%', icon: '/squarespace.svg' }
+    { name: 'TypeScript', icon: '/typescript.svg' },
+    { name: 'Tailwind CSS', icon: '/tailwind.svg' },
+    { name: 'React', icon: '/react.svg' },
+    { name: 'Next.js', icon: '/nextjs.svg' },
+    { name: 'HTML', icon: '/html.svg' },
+    { name: 'SquareSpace', icon: '/squarespace.svg' }
 
   ],
   backEnd: [
-    { name: 'C++', level: '92%', icon: '/cplusplus.svg' },
-    { name: 'Python', level: '90%', icon: '/python.svg' },
-    { name: 'Fast API', level: '90%', icon: '/FastAPI.svg' },
-    { name: 'Prisma DB', level: '80%', icon: '/prismadb.svg' },
-    { name: 'PostgreSQL', level: '85%', icon: '/postgresql.svg' },
+    { name: 'C++', icon: '/cplusplus.svg' },
+    { name: 'Python', icon: '/python.svg' },
+    { name: 'Fast API', icon: '/FastAPI.svg' },
+    { name: 'Prisma DB', icon: '/prismadb.svg' },
+    { name: 'PostgreSQL', icon: '/postgresql.svg' },
 
   ]
 };
 
-// Define a type for the keys of skillsData
 type SkillCategory = keyof typeof skillsData;
 
 export default function Skills() {
@@ -71,30 +71,20 @@ export default function Skills() {
         </motion.button>
       </div>
 
-
       {/* Skills grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-6">
         {skillsData[selectedCategory].map((skill, index) => (
           <motion.div
             key={index}
-            className="relative p-8 group hover:bg-[#1f395a] rounded-xl transition duration-300"
+            className="relative flex items-center justify-center p-5 group hover:bg-[#1f395a] rounded-xl transition duration-300"
             whileHover={{
               scale: 1.05,
               transition: { duration: 0.05, ease: 'easeOut' }
             }}
           >
             <div className="flex items-center">
-              <img src={skill.icon} alt={skill.name} className="w-8 h-8 mr-3" />
-              <p className="text-xl font-semibold ">{skill.name}</p>
-            </div>
-            <div className="relative w-full bg-black rounded-2xl h-2 mt-4">
-              <motion.div
-                className="absolute left-0 top-0 h-2 rounded-2xl bg-white"
-                style={{ width: skill.level }}
-                initial={{ width: 0 }}
-                animate={{ width: skill.level }}
-                transition={{ duration: 0.2, ease: 'easeOut' }}
-              ></motion.div>
+              <img src={skill.icon} alt={skill.name} className="w-10 h-10 mr-4" />
+              <p className="text-xl font-semibold">{skill.name}</p>
             </div>
           </motion.div>
         ))}
