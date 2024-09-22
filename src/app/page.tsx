@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <div className="bg-[#0a0a0a] text-white font-sans min-h-screen">
       <title>Sawan Ruppala</title>
-      <ReactCursorPosition color='255,255,255' trailingSpeed={15}  />
+      <ReactCursorPosition color="255,255,255" innerSize={8} outerSize={0} outerAlpha={0} outerScale={5} innerScale={2.5} />
       <Analytics />
       {/* Navbar */}
       <div className="bg-gradient-to-tr from-[#0a0a0a] via-[#0a0a0a] to-gray-600 bg-[length:200%_200%]" >
