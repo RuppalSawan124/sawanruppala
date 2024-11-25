@@ -97,7 +97,7 @@ export default function Home() {
               </motion.a>
 
               <motion.a
-                href="https://docs.google.com/document/d/1s8yTa3m1l-i8k055LQT-aqud0f18Ro8gA9sjJP8Qm5g/edit?usp=sharing"
+                href="https://docs.google.com/document/d/1Pv57zBPov2rOYpmdg1w0CfEkxHVMBLhAP4YZZgJJGFI/edit?usp=sharing"
                 className="text-gray-400 hover:text-white"
                 target="_blank"
                 aria-label="Resume"
